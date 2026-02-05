@@ -102,7 +102,7 @@ def main(page: ft.Page):
         page.appbar = ft.AppBar(
             title=ft.Text("أصيل ميسنجر الأمن"),
             bgcolor="gold",
-            actions=[ft.IconButton(ft.icons.SETTINGS, on_click=clear_chat_secure, tooltip="لوحة التحكم")]
+            actions=[ft.IconButton(, on_click=clear_chat_secure, tooltip="لوحة التحكم")]
         )
         page.add(ft.Column([ft.Row([ft.Container(content=chat_list, expand=3), ft.Container(content=users_column, expand=1, bgcolor="#eee")], expand=True),
                 ft.Container(content=ft.Row([msg_input, ft.IconButton(ft.icons.SEND, on_click=send_message)]), padding=10)], expand=True))
@@ -115,7 +115,7 @@ def main(page: ft.Page):
     txt_name = ft.TextField(label="الاسم", width=300)
     txt_phone = ft.TextField(label="رقم الهاتف", width=300)
   page.add(ft.Container(content=ft.Column([ft.ElevatedButton("دخول", on_click=lambda _: ...)])))sion.set("phone", txt_phone.value), page.session.set("username", txt_name.value), enter_chat_room()) if txt_phone.value else None)], horizontal_alignment="center"), alignment=ft.alignment.center, expand=True))
-on_click=lambda _: ...)])))
+on_click=lambda _: ...)]))))
 if __name__ == "__main__":
-    ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=8000, host="0.0.0.0")
+   ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=8000, host="0.0.0.0").
 
