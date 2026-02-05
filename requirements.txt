@@ -1,1 +1,1 @@
-flet[web]
+flet
