@@ -114,7 +114,7 @@ def main(page: ft.Page):
 
     txt_name = ft.TextField(label="الاسم", width=300)
     txt_phone = ft.TextField(label="رقم الهاتف", width=300)
-    page.add(ft.Container(content=ft.Column([ft.Icon(ft.icons.SECURITY, size=80, color="gold"), txt_name, txt_phone,
+    page.add(ft.Container(content=ft.Column([ft.Icon(ft.icons.LOCK, size=80, color="gold"), txt_name, txt_phone,
              ft.ElevatedButton("دخول", on_click=lambda _: (page.session.set("phone", txt_phone.value), page.session.set("username", txt_name.value), enter_chat_room()) if txt_phone.value else None)], horizontal_alignment="center"), alignment=ft.alignment.center, expand=True))
 
 if __name__ == "__main__":
