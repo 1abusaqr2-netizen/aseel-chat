@@ -104,19 +104,20 @@ def main(page: ft.Page):
         bgcolor="gold",
         actions=[ft.IconButton(icon=None, on_click=lambda _: clear_chat_secure(), tooltip="لوحة التحكم")]
     )
-    page.add(ft.Column([ft.Row([ft.Container(content=chat_list, expand=True)])]))
-    page.add(ft.Container(content=ft.Row([msg_input, ft.IconButton(icon=None, on_click=send_message)])))
+page.add(ft.Column([ft.Row([ft.Container(content=chat_list, expand=True)])]))
+page.add(ft.Container(content=ft.Row([msg_input, ft.IconButton(icon=None, on_click=send_message)])))
+txt_name = ft.TextField(label="الاسم", width=300)
+txt_phone = ft.TextField(label="رقم الهاتف", width=300)
 
-    txt_name = ft.TextField(label="الاسم", width=300)
-    txt_phone = ft.TextField(label="رقم الهاتف", width=300)
-    
-        page.add(
-        ft.Container(
-            content=ft.Column([
-                ft.ElevatedButton("دخول", on_click=lambda _: enter_chat_room())
-            ])
-        )
-    ) # يجب أن يكون هناك 3 أقواس إغلاق هنا لإنهاء الـ Container والـ add
+page.add(
+    ft.Container(
+        content=ft.Column([
+            ft.ElevatedButton("دخول", on_click=lambda _: enter_chat_room())
+        ])
+      )
+    )
 
 if __name__ == "__main__":
     ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=8000, host="0.0.0.0")
+
+
