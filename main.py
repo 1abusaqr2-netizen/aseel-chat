@@ -18,10 +18,10 @@ def main(page: ft.Page):
     users_column = ft.Column(spacing=10)
 
     # دالة مسح الشات (التي سيطلب التطبيق كلمة سر لتنفيذها)
-    def clear_chat_secure(e):
+def clear_chat_secure(e):
         pw_input = ft.TextField(label="كلمة سر المدير", password=True, can_reveal_password=True)
         
-        def confirm_clear(ev):
+def confirm_clear(ev):
             if pw_input.value == ADMIN_PASSWORD:
                 if os.path.exists(DB_FILE):
                     os.remove(DB_FILE)
@@ -43,7 +43,7 @@ def main(page: ft.Page):
         dialog.open = True
         page.update()
 
-    def add_message_to_ui(user, text, phone, is_image=False):
+def add_message_to_ui(user, text, phone, is_image=False):
         is_me = phone == page.session.get("phone")
         content = ft.Column([ft.Text(user, size=10, color="blue", weight="bold")], spacing=2)
         if is_image:
@@ -62,14 +62,14 @@ def main(page: ft.Page):
         )
         page.update()
 
-    def update_users_list():
+def update_users_list():
         users_column.controls.clear()
         users_column.controls.append(ft.Text("المتصلون الآن:", weight="bold", color="gold"))
         for phone, name in active_users.items():
             users_column.controls.append(ft.Row([ft.Icon(ft.icons.CIRCLE, color="green", size=10), ft.Text(name, size=14)]))
         page.update()
 
-    def on_broadcast(data):
+def on_broadcast(data):
         if data.get("action") == "login":
             active_users[data["phone"]] = data["user"]
             update_users_list()
@@ -90,13 +90,13 @@ def main(page: ft.Page):
     page.pubsub.subscribe(on_broadcast)
     msg_input = ft.TextField(hint_text="اكتب رسالة...", expand=True, border_radius=25)
 
-    def send_message(e):
+def send_message(e):
         if msg_input.value.strip():
             page.pubsub.send_all({"phone": page.session.get("phone"), "user": page.session.get("username"), "text": msg_input.value})
             msg_input.value = ""
             page.update()
 
-   def enter_chat_room():
+def enter_chat_room():
     page.pubsub.send_all({"action": "login", "phone": page.session.get("phone"), "user": page.session.get("user")})
     page.clean()
     page.appbar = ft.AppBar(
