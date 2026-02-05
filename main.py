@@ -26,21 +26,21 @@ def confirm_clear(ev):
                 if os.path.exists(DB_FILE):
                     os.remove(DB_FILE)
                 page.pubsub.send_all({"action": "clear"})
-                dialog.open = False
+dialog.open = False
                 page.show_snack_bar(ft.SnackBar(ft.Text("تم تنظيف السيرفر بنجاح")))
                 page.update()
             else:
                 pw_input.error_text = "كلمة السر خاطئة!"
                 page.update()
 
-        dialog = ft.AlertDialog(
+dialog = ft.AlertDialog(
             title=ft.Text("تأكيد مسح البيانات"),
             content=pw_input,
             actions=[ft.TextButton("إلغاء", on_click=lambda _: setattr(dialog, "open", False) or page.update()),
                      ft.ElevatedButton("مسح الكل", on_click=confirm_clear, bgcolor="red", color="white")]
         )
         page.overlay.append(dialog)
-        dialog.open = True
+dialog.open = True
         page.update()
 
 def add_message_to_ui(user, text, phone, is_image=False):
