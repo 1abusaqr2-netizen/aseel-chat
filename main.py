@@ -118,4 +118,5 @@ def main(page: ft.Page):
              ft.ElevatedButton("دخول", on_click=lambda _: (page.session.set("phone", txt_phone.value), page.session.set("username", txt_name.value), enter_chat_room()) if txt_phone.value else None)], horizontal_alignment="center"), alignment=ft.alignment.center, expand=True))
 
 if __name__ == "__main__":
-    ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=int(os.getenv("PORT", 8502)), host="0.0.0.0")
+    ft.app(target=main, view=ft.AppView.WEB_BROWSER)
+
