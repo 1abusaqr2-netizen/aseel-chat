@@ -96,26 +96,27 @@ def main(page: ft.Page):
             msg_input.value = ""
             page.update()
 
-    def enter_chat_room():
-        page.pubsub.send_all({"action": "login", "phone": page.session.get("phone"), "user": page.session.get("username")})
-        page.clean()
-        page.appbar = ft.AppBar(
-            title=ft.Text("أصيل ميسنجر الأمن"),
-            bgcolor="gold",
-            actions=[ft.IconButton(, on_click=clear_chat_secure, tooltip="لوحة التحكم")]
-        )
-        page.add(ft.Column([ft.Row([ft.Container(content=chat_list, expand=3), ft.Container(content=users_column, expand=1, bgcolor="#eee")], expand=True),
-                ft.Container(content=ft.Row([msg_input, ft.IconButton(ft.icons.SEND, on_click=send_message)]), padding=10)], expand=True))
-        if os.path.exists(DB_FILE):
-            with open(DB_FILE, "r", encoding="utf-8") as f:
-                for line in f:
-                    p = line.strip().split("|")
-                    if len(p)==3: add_message_to_ui(p[0], p[1], p[2])
+   def enter_chat_room():
+    page.pubsub.send_all({"action": "login", "phone": page.session.get("phone"), "user": page.session.get("user")})
+    page.clean()
+    page.appbar = ft.AppBar(
+        title=ft.Text("أصيل ميسنجر"),
+        bgcolor="gold",
+        actions=[ft.IconButton(icon=None, on_click=lambda _: clear_chat_secure(), tooltip="لوحة التحكم")]
+    )
+    page.add(ft.Column([ft.Row([ft.Container(content=chat_list, expand=True)])]))
+    page.add(ft.Container(content=ft.Row([msg_input, ft.IconButton(icon=None, on_click=send_message)])))
 
     txt_name = ft.TextField(label="الاسم", width=300)
     txt_phone = ft.TextField(label="رقم الهاتف", width=300)
-  page.add(ft.Container(content=ft.Column([ft.ElevatedButton("دخول", on_click=lambda _: ...)])))sion.set("phone", txt_phone.value), page.session.set("username", txt_name.value), enter_chat_room()) if txt_phone.value else None)], horizontal_alignment="center"), alignment=ft.alignment.center, expand=True))
-on_click=lambda _: ...)]))))
-if __name__ == "__main__":
-   ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=8000, host="0.0.0.0").
+    
+        page.add(
+        ft.Container(
+            content=ft.Column([
+                ft.ElevatedButton("دخول", on_click=lambda _: enter_chat_room())
+            ])
+        )
+    ) # يجب أن يكون هناك 3 أقواس إغلاق هنا لإنهاء الـ Container والـ add
 
+if __name__ == "__main__":
+    ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=8000, host="0.0.0.0")
