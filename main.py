@@ -27,7 +27,7 @@ def confirm_clear(ev):
                     os.remove(DB_FILE)
                 page.pubsub.send_all({"action": "clear"})
 dialog.open = False
-                page.show_snack_bar(ft.SnackBar(ft.Text("تم تنظيف السيرفر بنجاح")))
+    page.show_snack_bar(ft.SnackBar(ft.Text("تم تنظيف السيرفر بنجاح")))
                 page.update()
             else:
                 pw_input.error_text = "كلمة السر خاطئة!"
@@ -80,7 +80,7 @@ def on_broadcast(data):
             return
         
         if data["phone"] != page.session.get("phone"):
-            page.show_snack_bar(ft.SnackBar(ft.Text(f"رسالة من {data['user']}")))
+    page.show_snack_bar(ft.SnackBar(ft.Text(f"رسالة من {data['user']}")))
 
         if not data.get("is_image"):
             with open(DB_FILE, "a", encoding="utf-8") as f:
