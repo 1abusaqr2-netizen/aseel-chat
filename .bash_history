@@ -214,3 +214,170 @@ echo "flet" > requirements.txt
 git add requirements.txt
 git commit -m "إضافة ملف المتطلبات لتشغيل التطبيق"
 git push origin main --force
+nano main.py
+echo "flet" > requirements.txt
+git add .
+git commit -m "الحل النهائي لفتح التطبيق بدون أيقونات"
+git push origin main --force
+nano main.py
+git add main.py
+git commit -m "حذف الأيقونات نهائياً لضمان التشغيل"
+git push origin main --force
+nano main.py
+git add main.py
+git commit -m "final clean deploy"
+git push origin main --force
+git add main.py
+git commit -m "final clean deploy"
+git push origin main --force
+nano main.py
+git add main.py
+​git commit -m "fix final syntax"
+git push origin main --force
+nano main.py
+sed -i 's/^[[:space:]]*txt_name/txt_name/' main.py
+sed -i 's/^[[:space:]]*txt_phone/txt_phone/' main.py
+sed -i 's/^[[:space:]]*page.add/page.add/' main.py
+sed -i 's/^[[:space:]]*if __name__/if __name__/' main.py
+nano main.py
+sed -i 's/^[[:space:]]*txt_name/txt_name/' main.py && sed -i 's/^[[:space:]]*txt_phone/txt_phone/' main.py && sed -i 's/^[[:space:]]*page.add/page.add/' main.py && sed -i 's/^[[:space:]]*if __name__/if __name__/' main.py
+git add main.py
+git commit -m "fix: all indentation issues resolved"
+git push origin main --force
+git add main.py
+git commit -m "final indentation fix"
+git push origin main --force
+git add main.py
+git commit -m "final indentation fix now"
+git push origin main --force
+sed -i 's/^[[:space:]]*def /def /' main.py && sed -i 's/^[[:space:]]*async def /async def /' main.py && sed -i 's/^[[:space:]]*if __name__/if __name__/' main.py
+git add main.py
+git commit -m "complete indentation cleanup"
+git push origin main --force
+sed -i 's/^[[:space:]]*def /def /' main.py && sed -i 's/^[[:space:]]*async def /async def /' main.py && sed -i 's/^[[:space:]]*if __name__/if __name__/' main.py && sed -i 's/^[[:space:]]*txt_name/txt_name/' main.py && sed -i 's/^[[:space:]]*page.add/page.add/' main.py
+git add main.py
+git commit -m "global indentation reset"
+git push origin main --force
+git add main.py
+git commit -m "final global indentation fix"
+git push origin main --force
+git add main.py
+git commit -m "forced reset for indentation"
+git add main.py
+git commit -m "fix: force update indentation"
+git push origin main --force
+git add main.py
+git commit -m "fix: force update indentation"
+git push origin main --force
+nano main.py
+git add main.py
+git commit -m "real fix for indentation"
+git push origin main --force
+cp main.py temp.py
+rm main.py
+mv temp.py main.py
+git add main.py
+git commit -m "force update everything"
+git push origin main --force
+git add main.py
+git commit -m "forced rebuild from scratch"
+git push origin main --force
+git add main.py
+git commit -m "fix all indentation issues"
+nano main.py
+git add main.py
+git commit -m "fix all indentation issues"
+git push origin main --force
+sed -i 's/^[[:space:]]*dialog/dialog/' main.py && git add main.py && git commit -m "fix dialog indentation" && git push origin main --force
+sed -i 's/from flet_desktop/ # from flet_desktop/' main.py && sed -i 's/import close_flet_view/ # import close_flet_view/' main.py
+git add main.py
+git commit -m "convert to web mode"
+git push origin main --force
+nano main.py
+sed -i 's/from flet_desktop/ # from flet_desktop/' main.py && sed -i 's/import close_flet_view/ # import close_flet_view/' main.py
+git add main.py
+git commit -m "convert to web mode"
+git push origin main --force
+nano main.py
+sed -i 's/from flet_desktop/# from flet_desktop/' main.py && sed -i 's/import close_flet_view/# import close_flet_view/' main.py
+git add main.py
+git commit -m "convert to web mode"
+git push origin main --force
+sed -i 's/ft.app(target=main)/ft.app(target=main, port=8080, view=None)/' main.py
+git add main.py
+git commit -m "fix: set port for render"
+git push origin main --force
+nano main.py
+sed -i 's/ft.app(target=main)/ft.app(target=main, port=8080, view=None)/' main.py
+git add main.py
+git commit -m "fix: set port for render"
+git push origin main --force
+sed -i 's/ft.app(target=main)/import os; ft.app(target=main, port=int(os.getenv("PORT", 8080)), view=None)/' main.py
+git add main.py
+git commit -m "final port binding fix"
+git push origin main --force
+sed -i 's/ft.app(target=main)/import os; ft.app(target=main, port=int(os.getenv("PORT", 8080)), view=None)/' main.py
+git add main.py
+git commit -m "final port binding fix"
+git push origin main --force
+git add main.py
+git commit -m "fix port binding"
+git add main.py
+git commit -m "fix port binding"
+git push origin main --force
+git add main.py
+git commit -m "final deployment fix"
+git push origin main --force
+git add main.py
+git commit -m "final port fix"
+it add main.py
+git commit -m "fix: final port and web config"
+nano main.py
+git add main.py
+git commit -m "fix: final port and web config"
+git push origin main --force
+sed -i 's/from flet_desktop/# from flet_desktop/' main.py && sed -i 's/import close_flet_view/# import close_flet_view/' main.py
+git add main.py
+git commit -m "disable desktop for web deployment"
+git push origin main --force
+nano main.py
+sed -i 's/from flet_desktop/# from flet_desktop/' main.py && sed -i 's/import close_flet_view/# import close_flet_view/' main.py
+git add main.py
+git commit -m "disable desktop for web deployment"
+git push origin main --force
+sed -i 's/icons.PERSON/icons.person/g' main.py
+git add main.py
+git commit -m "fix icon name error"
+git push origin main --force
+nano main.py
+sed -i 's/icons.PERSON/icons.person/g' main.py
+git add main.py
+git commit -m "fix icon name error"
+git push origin main --force
+sed -i 's/^[[:space:]]*page.show_snack_bar/    page.show_snack_bar/' main.py && git add main.py && git commit -m "fix all indentation" && git push origin main --force
+nano main.py
+git add main.py
+git commit -m "fix icon name error"
+git push origin main --force
+sed -i 's/^[[:space:]]*page.show_snack_bar/    page.show_snack_bar/' main.py && sed -i 's/icons.PERSON/icons.person/g' main.py && git add main.py && git commit -m "fix: total indent and icon fix" && git push origin main --force
+nano main.py
+sed -i 's/^[[:space:]]*page.show_snack_bar/    page.show_snack_bar/' main.py && sed -i 's/icons.PERSON/icons.person/g' main.py && git add main.py && git commit -m "fix: total indent and icon fix" && git push origin main --force
+sed -i 's/^[[:space:]]*page.show_snack_bar/    page.show_snack_bar/' main.py && sed -i 's/icons.PERSON/icons.person/g' main.py
+git add main.py && git commit -m "absolute final fix" && git push origin main --force
+'
+sed -i 's/^[[:space:]]*page.show_snack_bar/    page.show_snack_bar/' main.py && sed -i 's/icons.PERSON/icons.person/g' 
+git add main.py && git commit -m "final fix" && git push origin main --force
+sed -i 's/^[[:space:]]*page.show_snack_bar/    page.show_snack_bar/' main.py && sed -i 's/icons.PERSON/icons.person/g' 
+git add main.py && git commit -m "final fix" && git push origin main --force
+sed -i 's/^[[:space:]]*page.show_snack_bar/    page.show_snack_bar/' main.py && sed -i 's/icons.PERSON/icons.person/g' 
+git add main.py && git commit -m "final fix" && git push origin main --force
+sed -i 's/^[[:space:]]*page.show_snack_bar/    page.show_snack_bar/' main.py && sed -i 's/icons.PERSON/icons.person/g' 
+git add main.py && git commit -m "final fix" && git push origin main --force
+sed -i 's/^[[:space:]]*page.show_snack_bar/    page.show_snack_bar/' main.py
+sed -i 's/icons.PERSON/icons.person/g' main.py
+git add main.py
+git commit -m "final absolute fix"
+git push origin main --force
+sed -i 's/ft.app(target=main)/ft.app(target=main, view=ft.AppView.WEB_BROWSER)/g' main.py
+echo "flet" > requirements.txt
+git add main.py requirements.txt && git commit -m "fix: force web view" && git push origin main --force
