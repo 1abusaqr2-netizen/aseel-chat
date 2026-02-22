@@ -26,4 +26,5 @@ def main(page: ft.Page):
 
 if __name__ == "__main__":
     # لاحظ هنا: جعلنا الـ view يساوي None لتجنب أخطاء التحميل
-    ft.app(target=main, view=None, port=8502, host="0.0.0.0")
+    ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=8000)
+
